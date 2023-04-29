@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+body{
+    margin: 0;
+}
+
+.container{
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('fotos/citroen.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-clip: border-box;
+}
+
+.right-side-container{
+    width: 40%;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.title-background:before{
+    content: "";
+    display: block;
+    height: 100px;
+    width: 70px;
+    background-color: #ee0000;
+  }
+
+.title-background{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    line-height: .3rem;
+    width: 100%;
+    height: 25vh;
+}
+
+.title-background > .title-hero{
+    font-family: 'Montserrat';
+    color: rgb(255, 255, 255);
+    font-size: 3rem;
+    text-transform: uppercase;
+}
+.description-hero{
+    width: 100%;
+    height: 20vh;
+}
+
+.description-text-hero{
+    font-family: 'Montserrat';
+    font-size: 1.4rem;
+    color: white;
+    line-height: .5rem;
+}
+
+.description-text-hero > .destaque{
+    font-weight: 800;
+}
+
+.bnt-hero{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 10vh;
+}
+
+.bnt-hero > button{
+    width: 60%;
+    height: 10vh;
+    background: transparent;
+    border-radius: 30px;
+    border: 3px solid rgb(255, 255, 255);
+    font-family: 'Montserrat';
+    font-size: 1rem;
+    font-weight: 700;
+    color: white;
+    text-transform: uppercase;
+}
+
+
+.left-side-container{
+    width: 60%;
+    height: 100vh;
+}
