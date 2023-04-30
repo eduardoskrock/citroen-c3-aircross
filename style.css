@@ -4,10 +4,74 @@ body{
     margin: 0;
 }
 
+.container-header{
+    display: flex;
+    width: 100vw;
+    height: 8vh;
+    background: rgb(255, 255, 255);
+}
+
+.menu-hamburguer{
+    width: 10%;
+    height: 8vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Montserrat';
+    font-size: 1rem;
+    cursor: pointer;
+}
+#menu-icon{
+    display: block;
+    border-top: 3px solid;
+    width: 20px;
+}
+
+#menu-icon::after, #menu-icon::before {
+    content: '';
+    display: block;
+    width: 20px;
+    height: 3px;
+    background-color: rgb(0, 0, 0);
+    margin-top: 5px
+}
+
+.logo-citroen-central{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    width: 45%;
+    height: 8vh;
+}
+
+.login-cliente{
+    display: flex;
+    justify-content: end;
+    width: 45%;
+    height: 8vh;
+}
+
+.navegacao-cliente{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    cursor: pointer;
+}
+#login-cliente-texto{
+    font-family: 'Montserrat';
+    text-transform: uppercase;
+    font-size: .8rem;
+    font-weight: 600;
+}
+  
+
 .container{
     display: flex;
     width: 100vw;
     height: 100vh;
+    background-attachment: fixed;
     background-image: url('fotos/citroen.png');
     background-repeat: no-repeat;
     background-size: cover;
@@ -26,8 +90,8 @@ body{
 .title-background:before{
     content: "";
     display: block;
-    height: 100px;
-    width: 70px;
+    height: 10px;
+    width: 100px;
     background-color: #ee0000;
   }
 
@@ -35,15 +99,13 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    line-height: .3rem;
     width: 100%;
-    height: 25vh;
 }
 
 .title-background > .title-hero{
     font-family: 'Montserrat';
     color: rgb(255, 255, 255);
-    font-size: 3rem;
+    font-size: 2.5rem;
     text-transform: uppercase;
 }
 .description-hero{
@@ -89,13 +151,20 @@ body{
 }
 
 
+/*Início da Section 2*/
 
-.container-section-2{
-    width: 100vw;
-    height: 40vh;
+.container-standart{
+    padding-top: 5rem;
     display: flex;
-    flex-direction: column;
     align-items: center;
+    justify-content: center;
+    width: 100vw;
+    background: #f1f1f1;
+    height: 100vh;
+}
+
+.container-standart.section-2{
+    flex-direction: column;
 }
 
 .items-menu{
@@ -108,14 +177,21 @@ body{
 }
 
 .item1{ 
-    padding: .8rem;
+    padding: .6rem;
     background: transparent;
-    border: 2px solid black;
+    border: 2px solid rgb(112, 112, 112);
     font-family: 'Montserrat';
-    font-size: 1rem;
+    font-size: .7rem;
     text-transform: uppercase;
     font-weight: 600;
-    border-radius: 30px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.item1:hover{
+    background: black;
+    color: white;
+    border: 2px solid black;
 }
 
 .text-section-2{
@@ -150,6 +226,105 @@ body{
     text-align: center;
 }
 
+.description-text.section-3, .description-text.section-5{
+    text-align: start;
+}
+
+.video-section-2{
+    padding-top: 2rem;
+}
+
+.btn-section-2{
+    padding-top: 1rem;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 10vh;
+    padding-bottom: .7rem;
+}
+
+.btn{
+    width: 300px;
+    height: 50px;
+    border-radius: 30px;
+    background: rgb(202, 50, 50);
+    color: rgb(255, 255, 255);
+    font-family: 'Montserrat';
+    border: none;
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.btn:hover{
+    background: rgb(199, 26, 26);
+}
+
+.video-section-2{
+    max-width: 80%;
+}
+
+iframe{
+    max-width: 100%;
+}
+
+/*INÍCIO SECTION 3*/
+
+
+.left-side-section3, .right-side-section4, .left-side-section5{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}
+
+.right-side-section3, .left-side-section4, .right-side-section5{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}
+
+.box-text-section3, .box-text-section4, .box-text-section5{
+    width: 80%;
+}
+
+.img-section{
+    border-radius: 10px;
+}
+
+.img-mobile{
+    display: none;
+}
+
+.description-section{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.bnt-hero.section-3, .bnt-hero.section-4, .bnt-hero.section-5{
+    padding-top: 2.5rem;
+    width: 350px;
+}
+
+.bnt-hero.section-3 > button, .bnt-hero.section-4 > button, .bnt-hero.section-5 > button{
+    color: black;
+    border: 2px solid black;
+}
+
+.bnt-hero.section-3 > button:hover, .bnt-hero.section-4 > button:hover {
+    background: black;
+    color: white;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.container-section-4{
+    background-color: #e2e2e2;
+}
+
+
 @media only screen and (max-width: 600px) {
     .container {
       background-image: url('fotos/citroen1.png');
@@ -165,9 +340,8 @@ body{
         width: 95%;
     }
 
-    .container-section-2{
+    .container-standart.section-2, .container-standart.section-5{
         width: 100%;
-        height: 60vh;
     }
 
     .items-menu{
@@ -181,7 +355,7 @@ body{
         padding: .6rem;
     }
 
-    .title-section-2{
+    .title-section-2, .title-section-5{
         width: 100%;
         height: 10vh;
         text-align: center;
@@ -190,4 +364,41 @@ body{
     .title-section{
         font-size: 1.3rem;
     }
+
+    .container-standart.section-3, .left-side-section4, .container-standart.section-5 {
+        margin-top: 3rem;
+        flex-direction: column;
+    }
+
+    .img-section{
+        display: none;
+    }
+
+    .img-mobile{
+        width: 400px;
+        height: 300px;
+        display: block;
+    }
+
+    .right-side-section3, .right-side-section5{
+        margin-top: 1rem;
+        width: 100%;
   }
+
+  .bnt-hero.section-3 > button, .bnt-hero.section-4 > button, .bnt-hero.section-5 > button{
+        width: 200px;
+        height: 50px;
+  }
+
+  .container-standart.section-4{
+    flex-direction: column-reverse;
+  }
+
+  .left-side-section4{
+    width: 100%;
+  }
+
+  .right-side-section5{
+    width: 100%;
+  }
+}
