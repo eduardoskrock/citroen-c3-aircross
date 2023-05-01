@@ -6,7 +6,7 @@ body{
 
 .container-header{
     display: flex;
-    width: 100vw;
+    max-width: 100vw;
     height: 8vh;
     background: rgb(255, 255, 255);
 }
@@ -69,7 +69,7 @@ body{
 
 .container{
     display: flex;
-    width: 100vw;
+    max-width: 100vw;
     height: 100vh;
     background-attachment: fixed;
     background-image: url('fotos/citroen.png');
@@ -100,6 +100,7 @@ body{
     flex-direction: column;
     justify-content: center;
     width: 100%;
+    line-height: 2.5rem;
 }
 
 .title-background > .title-hero{
@@ -132,8 +133,8 @@ body{
 }
 
 .bnt-hero > button{
-    width: 60%;
-    height: 10vh;
+    width: 250px;
+    height: 50px;
     background: transparent;
     border-radius: 30px;
     border: 3px solid rgb(255, 255, 255);
@@ -142,8 +143,14 @@ body{
     font-weight: 700;
     color: white;
     text-transform: uppercase;
+    cursor: pointer;
 }
 
+.bnt-hero > button:hover{
+    background: #ee0000;
+    border: 3px solid #ee0000;
+    transition: .3s;
+}
 
 .left-side-container{
     width: 60%;
@@ -154,12 +161,11 @@ body{
 /*Início da Section 2*/
 
 .container-standart{
-    padding-top: 5rem;
+    margin-top: 4rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100vw;
-    background: #f1f1f1;
+    max-width: 100vw;
     height: 100vh;
 }
 
@@ -324,6 +330,17 @@ iframe{
     background-color: #e2e2e2;
 }
 
+.container-standart.section-6{
+    width: 100%;
+}
+
+.container-standart.section-6 img{
+    max-width: 100%;
+    height: 50%;
+    border-radius: 0;
+}
+
+
 
 @media only screen and (max-width: 600px) {
     .container {
@@ -383,22 +400,19 @@ iframe{
     .right-side-section3, .right-side-section5{
         margin-top: 1rem;
         width: 100%;
-  }
+    }
 
-  .bnt-hero.section-3 > button, .bnt-hero.section-4 > button, .bnt-hero.section-5 > button{
+    .bnt-hero.section-3 > button, .bnt-hero.section-4 > button, .bnt-hero.section-5 > button{
         width: 200px;
         height: 50px;
-  }
+    }
 
-  .container-standart.section-4{
-    flex-direction: column-reverse;
-  }
+    .container-standart.section-4{
+        flex-direction: column-reverse;
+    }
 
-  .left-side-section4{
-    width: 100%;
-  }
+    .left-side-section4, .right-side-section5{
+        width: 100%;
+    }
 
-  .right-side-section5{
-    width: 100%;
-  }
 }
